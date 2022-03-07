@@ -1,0 +1,49 @@
+"CREATE TABLE Block (id INT PRIMARY KEY, block_hash VARCHAR(10000) NOT NULL, block_time INT UNSIGNED NOT NULL);"
+
+"""CREATE TABLE Input (id INT PRIMARY KEY, outputID INT NOT NULL, txID INT NOT NULL, offset INT NOT NULL, 
+CONSTRAINT fk_outputID FOREIGN KEY (outputID) REFERENCES Output(id), 
+CONSTRAINT fk_input_txID FOREIGN KEY (txID) REFERENCES Transaction(id));"""
+
+"""CREATE TABLE Output (id INT PRIMARY KEY, dstAddress VARCHAR(10000) NOT NULL, value BIGINT NOT NULL, txID INT NOT NULL, offset INT NOT NULL, 
+CONSTRAINT fk_txID FOREIGN KEY (txID) REFERENCES Transaction(id));"""
+
+"CREATE TABLE Transaction (id INT PRIMARY KEY, hash VARCHAR(10000) NOT NULL, blockID INT NOT NULL, CONSTRAINT fk_blockID FOREIGN KEY (blockID) REFERENCES Block(id));"
+
+
+
+MY QUESTIONS: 1, 3, 4, 6, 7, 8, 9
+
+QUERIES
+1.
+SELECT *, (SELECT Count(*) FROM Transaction WHERE Transaction.blockID = Block.id) AS TransactionCount FROM Block ORDER BY TransactionCount DESC LIMIT 10;
+
+3.
+SELECT *, (SELECT Count(*) FROM Input WHERE Transaction.id = Input.txID) AS InputCount FROM Transaction ORDER BY InputCount DESC LIMIT 10;
+
+4. 
+SELECT *, (SELECT Count(*) FROM Output WHERE Transaction.id = Output.txID) AS OutputCount FROM Transaction ORDER BY OutputCount DESC LIMIT 10;
+
+6.
+SELECT Sum(value) AS Input_Sum FROM Output WHERE id IN (SELECT outputID FROM Input WHERE txID=504);
+SELECT *, (SELECT Sum(value) FROM Output WHERE id IN (SELECT outputID FROM Input WHERE txID=504)) as Input_Sum FROM Transaction WHERE id=504;
+
+7.
+SELECT *, (SELECT Sum(value) FROM Output WHERE txID=504) as Output_Sum FROM Transaction WHERE id=504;
+
+8.
+SELECT dstAddress FROM Output WHERE id IN (SELECT outputID FROM Input WHERE txID=504);
+
+9.
+SELECT dstAddress FROM Output WHERE txID=504
+
+11.
+SELECT dstAddress, Count(*) as Input_Count FROM Output WHERE id IN (SELECT outputID FROM Input) GROUP BY dstAddress ORDER BY Input_Count DESC LIMIT 10;
+SELECT dstAddress, Count(*) as Input_Count FROM Output INNER JOIN Input ON Output.id = Input.outputID GROUP BY dstAddress ORDER BY Input_Count DESC LIMIT 10;
+
+12.
+SELECT dstAddress, Count(*) AS Output_Count FROM Output GROUP BY dstAddress ORDER BY Output_Count DESC LIMIT 10;
+
+13.
+SELECT Block.id, Block.block_hash, Block.block_time, Sum(value) AS Total_Value FROM Block INNER JOIN (SELECT blockID, value FROM Transaction INNER JOIN Output ON Transaction.id = Output.txID) AS Temp ON Block.id = Temp.blockID GROUP BY blockID ORDER BY Total_Value DESC LIMIT 10;
+
+

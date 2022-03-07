@@ -43,7 +43,7 @@ def insert_into_command(X, command):
 
 if __name__ == '__main__':
     conn = msql.connect(host='localhost', user='root',  
-                            password='dozkoz')#give ur username, password
+                            password='132456')#give ur username, password
     if conn.is_connected():
         cursor = conn.cursor()
     else:

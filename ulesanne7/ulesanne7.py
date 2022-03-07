@@ -48,7 +48,13 @@ if __name__ == '__main__':
         cursor = conn.cursor()
     else:
         print("Error while connecting to MySQL")
+
+    #uncomment code to execute
+    #create dabatabse => create tables => insert data => make queries
+
+    #cursor.execute("CREATE DATABASE bitcoin;")    
     cursor.execute("USE bitcoin;")
+
     #create_tables(cursor)
 
     #insert_data(cursor, conn, "blocks.csv", "INSERT INTO Block VALUES (%s, %s, %s);", lambda row: (int(row[0]), row[1], int(row[2])))

@@ -1,0 +1,2 @@
+võid <- margariinid (11.8227, 100)
+margariinid <- võid (11.8227, 100)

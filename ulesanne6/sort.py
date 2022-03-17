@@ -30,7 +30,6 @@ def write(items, filename):
             
 
 sort_data(items, "output2_tr_2_percent.txt", True)
-print(items)
 write(items, "sorted.txt")
 
 

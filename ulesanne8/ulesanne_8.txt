@@ -1,0 +1,136 @@
+SimpleKMeans
+Canopy
+FarthestFirst
+
+3
+5
+7
+
+                           Cluster#
+Attribute      Full Data          0          1          2
+                 (600.0)    (154.0)    (251.0)    (195.0)
+=========================================================
+age               42.395    41.9545    46.5618    37.3795
+sex               FEMALE     FEMALE     FEMALE       MALE
+region        INNER_CITY       TOWN INNER_CITY INNER_CITY
+income        27524.0312 27284.6914 31075.1603 23142.1078
+married              YES         NO        YES        YES
+children          1.0117     1.2987     1.0637     0.7179
+car                   NO         NO        YES         NO
+save_act             YES        YES        YES         NO
+current_act          YES        YES        YES        YES
+mortgage              NO         NO         NO         NO
+pep                   NO         NO         NO        YES
+
+Cluster 0: 53.215054,FEMALE,INNER_CITY,38968.458602,YES,0.956989,YES,YES,YES,NO,YES,{93} <0,1>
+Cluster 1: 45.646341,MALE,INNER_CITY,30392.795122,YES,0.829268,NO,YES,YES,YES,YES,{82} <0,1>
+Cluster 2: 39.565217,MALE,TOWN,23784.04,YES,0.326087,YES,YES,NO,NO,NO,{46} <2>
+
+Cluster 0
+	 20.0 MALE TOWN 9516.91 NO 3.0 YES YES YES NO NO
+Cluster 1
+	 59.0 FEMALE INNER_CITY 23175.0 YES 0.0 NO NO NO YES YES
+Cluster 2
+	 67.0 FEMALE SUBURBAN 63130.1 YES 2.0 YES YES YES NO YES
+
+
+
+
+
+
+                           Cluster#
+Attribute      Full Data          0          1          2          3          4
+                 (600.0)     (89.0)    (108.0)    (117.0)    (110.0)    (176.0)
+===============================================================================
+age               42.395    40.7079    41.0556    47.3162    36.2273    44.6534
+sex               FEMALE     FEMALE     FEMALE     FEMALE     FEMALE       MALE
+region        INNER_CITY      RURAL INNER_CITY INNER_CITY       TOWN INNER_CITY
+income        27524.0312 26082.1806  25330.272 31727.1055 21002.7549 30881.0278
+married              YES         NO        YES        YES        YES        YES
+children          1.0117     1.7753     1.3333     1.0085     0.6636     0.6477
+car                   NO         NO         NO         NO         NO        YES
+save_act             YES        YES        YES        YES         NO        YES
+current_act          YES        YES        YES        YES        YES        YES
+mortgage              NO         NO         NO         NO         NO        YES
+pep                   NO         NO         NO        YES         NO        YES
+
+
+Cluster 0: 53.215054,FEMALE,INNER_CITY,38968.458602,YES,0.956989,YES,YES,YES,NO,YES,{93} <0,1>
+Cluster 1: 45.646341,MALE,INNER_CITY,30392.795122,YES,0.829268,NO,YES,YES,YES,YES,{82} <0,1>
+Cluster 2: 39.565217,MALE,TOWN,23784.04,YES,0.326087,YES,YES,NO,NO,NO,{46} <2>
+Cluster 3: 34.358974,MALE,INNER_CITY,18881.482308,NO,1.589744,NO,NO,YES,NO,NO,{39} <3,4>
+Cluster 4: 36.210526,FEMALE,TOWN,22111.808421,YES,0.394737,NO,NO,YES,NO,NO,{38} <3,4>
+
+
+Cluster 0
+	 20.0 MALE TOWN 9516.91 NO 3.0 YES YES YES NO NO
+Cluster 1
+	 59.0 FEMALE INNER_CITY 23175.0 YES 0.0 NO NO NO YES YES
+Cluster 2
+	 67.0 FEMALE SUBURBAN 63130.1 YES 2.0 YES YES YES NO YES
+Cluster 3
+	 65.0 MALE INNER_CITY 57671.7 NO 0.0 NO YES YES YES NO
+Cluster 4
+	 18.0 MALE RURAL 8639.24 YES 2.0 NO NO NO NO NO
+
+
+
+
+
+
+
+
+
+
+                           Cluster#
+Attribute      Full Data          0          1          2          3          4          5          6
+                 (600.0)     (55.0)     (53.0)     (69.0)     (53.0)     (99.0)    (128.0)    (143.0)
+=====================================================================================================
+age               42.395    42.0182    48.6038    39.4058    33.4151     38.404    46.8281    43.8042
+sex               FEMALE     FEMALE     FEMALE     FEMALE     FEMALE       MALE       MALE     FEMALE
+region        INNER_CITY      RURAL      RURAL INNER_CITY       TOWN INNER_CITY       TOWN INNER_CITY
+income        27524.0312 27807.6038 32859.1053 20628.0467 18963.5877  25720.037 32823.8996 28442.7955
+married              YES         NO        YES        YES        YES        YES         NO        YES
+children          1.0117     1.8364     1.6604     0.6812     1.3962      0.899     0.9297     0.6224
+car                   NO         NO         NO         NO         NO        YES        YES         NO
+save_act             YES        YES        YES         NO         NO         NO        YES        YES
+current_act          YES        YES        YES        YES        YES        YES        YES        YES
+mortgage              NO         NO         NO         NO         NO        YES         NO         NO
+pep                   NO         NO         NO        YES         NO        YES        YES         NO
+
+
+
+Cluster 0: 53.215054,FEMALE,INNER_CITY,38968.458602,YES,0.956989,YES,YES,YES,NO,YES,{93} <0,1,6>
+Cluster 1: 45.646341,MALE,INNER_CITY,30392.795122,YES,0.829268,NO,YES,YES,YES,YES,{82} <0,1>
+Cluster 2: 39.565217,MALE,TOWN,23784.04,YES,0.326087,YES,YES,NO,NO,NO,{46} <2,5,6>
+Cluster 3: 34.358974,MALE,INNER_CITY,18881.482308,NO,1.589744,NO,NO,YES,NO,NO,{39} <3,4>
+Cluster 4: 36.210526,FEMALE,TOWN,22111.808421,YES,0.394737,NO,NO,YES,NO,NO,{38} <3,4,6>
+Cluster 5: 35.321429,MALE,TOWN,21996.9975,NO,1.357143,YES,YES,YES,YES,NO,{28} <2,5,6>
+Cluster 6: 48.230769,FEMALE,TOWN,31472.489231,YES,0.769231,YES,YES,YES,YES,NO,{26} <0,2,4,5,6>
+
+
+Cluster 0
+	 20.0 MALE TOWN 9516.91 NO 3.0 YES YES YES NO NO
+Cluster 1
+	 59.0 FEMALE INNER_CITY 23175.0 YES 0.0 NO NO NO YES YES
+Cluster 2
+	 67.0 FEMALE SUBURBAN 63130.1 YES 2.0 YES YES YES NO YES
+Cluster 3
+	 65.0 MALE INNER_CITY 57671.7 NO 0.0 NO YES YES YES NO
+Cluster 4
+	 18.0 MALE RURAL 8639.24 YES 2.0 NO NO NO NO NO
+Cluster 5
+	 37.0 MALE RURAL 28021.6 NO 0.0 YES NO YES YES YES
+Cluster 6
+	 30.0 MALE SUBURBAN 15848.7 YES 0.0 YES YES NO YES NO
+
+
+
+
+
+
+
+
+
+
+
